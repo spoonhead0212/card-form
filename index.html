@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="flex">
+    <section class="left"></section>
+    <section class="right">
+      <div class="inside-right flex">
+        <div class="card-box flex">
+          <div class="card front">
+            <div class="flex circle-box">
+              <span class="circle left-circle"></span>
+              <span class="circle right-circle"></span>
+            </div>
+            <div>
+              <p class="card-number-ui">1234 5678 9123 0000</p>
+              <div class="justified-flex name-box">
+                <p class="card-name-ui">jane applessed</p>
+                <p class="mon"><span class="month-ui">00</span>/<span class="year-ui">00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card back">
+            <p class="card-cvv-ui">000</p>
+          </div>
+        </div>
+        <div class="flex form-box">
+          <div class="form-parent">
+            <form class="form">
+              <label for="holder-name">cardholder name</label><br>
+              <input type="text" id="holder-name" placeholder="Jane Appleseed" class="holder-name"><br>
+              <small class="name-error"></small>
+              <br>
+
+              <label for="holder-number">card number</label><br>
+              <input type="text" id="holder-number" placeholder="e.g. 1234 5678 9123 0000" class="number-input"><br>
+              <small class="number-error">Wrong format, numbers only</small><br>
+
+              <div class="justified-flex date">
+                <div>
+                  <label for="mon-yr">Exp. Date (MM/YY)</label><br>
+                  <input type="text" id="mon-yr" placeholder="MM" class="month">
+                  <input type="text" id="mon-yr" placeholder="YY" class="year"><br>
+                  <small class="mon-yr-error">Can't be black</small>
+                </div>
+                <div>
+                  <label for="cvv" >cvv</label><br>
+                  <input type="text" id="cvv" placeholder="e.g. 123" class="cvv-number">
+                  <small class="cvv-error"></small>
+                </div>
+              </div>
+              <button>Confirm</button>
+            </form>
+          </div>
+          <div class="completed">
+            <img src="images/icon-complete.svg" alt="" width="100px">
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
